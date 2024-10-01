@@ -1,0 +1,235 @@
+/* General Container for the customer list */
+.customerListContainer {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.searchContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    max-width: 355px;
+}
+
+/* Search bar input */
+.searchInput {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 15px 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.searchInput:focus {
+    border-color: #db7d2f;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Search icon inside the input */
+.searchIcon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0e0d0d;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Loading spinner container */
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+
+.loadingIcon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Table styles */
+.customerTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+.customerTable th,
+.customerTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Ellipsis for overflowed text */
+}
+
+.customerTable th {
+    background-color: #c31f1f;
+    font-weight: bold;
+}
+
+.customerTable td button {
+    padding: 6px 12px;
+    background-color: #db7d2f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.customerTable td button:hover {
+    background-color: #cf6f24;
+}
+
+/* Make table scrollable on smaller screens */
+@media screen and (max-width: 768px) {
+    .customerTable {
+        display: block;
+        overflow-x: auto;
+        /* Scroll horizontally on small screens */
+        white-space: nowrap;
+        /* Prevent table from breaking into new lines */
+    }
+
+    .customerTable th,
+    .customerTable td {
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .customerTable td button {
+        padding: 5px 10px;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.closeButton {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* QR Code container in modal */
+.qrCodeContainer {
+    margin-top: 20px;
+}
+
+/* QR Code Heading */
+#qrCodeHeading {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Button for printing */
+button {
+    padding: 10px 20px;
+    background-color: #db7d2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cf6f24;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .customerListContainer {
+        padding: 10px;
+    }
+
+    .customerTable th,
+    .customerTable td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modalContent {
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .searchContainer {
+        justify-content: center;
+        /* Center the search bar on smaller screens */
+    }
+
+    .searchInput {
+        width: 90%;
+        /* Expand search bar width on smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .searchInput {
+        width: 100%;
+        /* Ensure full width on the smallest screens */
+    }
+
+    .customerTable th,
+    .customerTable td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .customerTable td button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .modalContent {
+        padding: 15px;
+    }
+
+    .closeButton {
+        font-size: 24px;
+    }
+}

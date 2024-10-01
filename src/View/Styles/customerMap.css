@@ -1,0 +1,115 @@
+.filter-label {
+    font-size: 12px;
+    font-weight: small;
+    font-style: italic;
+}
+
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* Spacing below the buttons */
+}
+
+.filter-button {
+    background-color: transparent;
+    color: orange;
+    border: 1px dashed #2E7D32;
+    padding: 3px 10px;
+    margin: 0 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #319c364e;
+    color: white;
+    /* Darker green on hover */
+}
+
+.filter-button.active {
+    background-color: #2b8730a5;
+    color: white;
+}
+
+/* CustomerMap.css */
+.customer-map-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.customer-map-title {
+    font-size: 24px;
+    /* Title font size */
+    margin-bottom: 10px;
+    /* Space below the title */
+    color: #333;
+    /* Dark text color */
+}
+
+.map {
+    border-radius: 8px;
+    /* Rounded corners for the map */
+    overflow: hidden;
+    /* Ensure rounded corners apply */
+}
+
+.leaflet-container {
+    transition: transform 0.3s ease;
+    /* Smooth zoom/drag transition */
+}
+
+.leaflet-container:hover {
+    transform: scale(1.02);
+    /* Slightly scale on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .customer-map-container {
+        padding: 10px;
+    }
+
+    .customer-map-title {
+        font-size: 20px;
+        /* Smaller title font size */
+    }
+}
+
+/* Container for the loader */
+.loaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    gap: 1rem;
+    /* Set height same as map height for consistency */
+}
+
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading text */
+.loaderContainer p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}

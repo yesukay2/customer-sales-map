@@ -1,0 +1,152 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+}
+
+.scan-container {
+    max-width: 600px;
+    /* Limit max width */
+    margin: 20px auto;
+    /* Center the container with margin */
+    padding: 20px;
+    /* Add padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+    background-color: #fff;
+    /* White background for the container */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.75em;
+    /* Slightly larger font for heading */
+    color: #333;
+    /* Darker text color */
+}
+
+/* Button styles */
+.btn-scan,
+.btn-stop,
+.btn-submit,
+.btn-restock,
+.btn-in-stock {
+    width: auto;
+    /* Auto width to avoid long buttons */
+    padding: 10px 15px;
+    /* Add horizontal padding for buttons */
+    margin-top: 10px;
+    /* Margin for spacing */
+    background-color: #db7d2f;
+    /* Button color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transition */
+}
+
+.btn-scan:hover,
+.btn-stop:hover,
+.btn-submit:hover,
+.btn-restock:hover,
+.btn-in-stock:hover {
+    background-color: #c68c29;
+    /* Darker shade on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+}
+
+/* Input field styles */
+.input-field {
+    width: 100%;
+    /* Full width */
+    max-width: 300px;
+    /* Limit max width */
+    padding: 10px;
+    /* Padding for input */
+    margin-top: 10px;
+    /* Margin for spacing */
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Inner shadow for depth */
+}
+
+.error {
+    color: red;
+    /* Error text color */
+    margin-top: 5px;
+    /* Margin for spacing */
+}
+
+/* Customer details */
+.customer-details {
+    margin-top: 20px;
+    /* Margin for spacing */
+    padding: 10px;
+    /* Padding for customer details */
+    border: 1px solid #ccc;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #f7f7f7;
+    /* Light background for contrast */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5em;
+        /* Adjust heading size */
+    }
+
+    .input-field {
+        padding: 8px;
+        /* Adjust input padding */
+        margin: 5px;
+        /* Adjust margin */
+        width: 70%;
+
+    }
+
+    .btn-scan,
+    .btn-stop,
+    .btn-submit,
+    .btn-restock,
+    .btn-in-stock {
+        padding: 8px 12px;
+        /* Adjust button padding */
+    }
+
+    .customer-details {
+        font-size: 0.9em;
+        /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .scan-container {
+        padding: 10px;
+        /* Reduce padding for small screens */
+    }
+
+    h2 {
+        font-size: 1.25em;
+        /* Further adjust heading size */
+    }
+}
