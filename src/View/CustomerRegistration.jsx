@@ -28,8 +28,6 @@ const CustomerRegistration = () => {
   // Function to handle form submission
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      console.log("Customer Data:", values);
-
       // Simulate QR code generation
       const generatedQrCode = `QRCode_${values.name}_${Date.now()}`;
       setQrCode(generatedQrCode);
@@ -59,7 +57,6 @@ const CustomerRegistration = () => {
           },
         }
       );
-      console.log("Response from server:", response.data);
 
       // Reset the form upon successful submission
       resetForm();

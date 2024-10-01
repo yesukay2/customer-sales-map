@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.log(err));
+  .catch((err) => console.error(err));
 
 // Define routes
 app.get("/", (req, res) => {

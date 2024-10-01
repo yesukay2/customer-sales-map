@@ -75,7 +75,6 @@ const ScanQRCode = () => {
       const id = customerDetails._id;
       try {
         const formattedDate = format(new Date(), "dd/MM/yyyy hh:mm a");
-        console.log("formattedDate:", formattedDate);
         await axios.patch(
           `${serverLink}/csm/qr-code/update-last-scanned/${id}`,
           {

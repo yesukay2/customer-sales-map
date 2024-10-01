@@ -17,7 +17,6 @@ export const scanQRCode = async (req, res) => {
 export const updateLastScanned = async (req, res) => {
   const id = req.params.id;
   const { lastScanned } = req.body;
-  console.log(lastScanned);
   try {
     const customer = await Customer.findById(id);
     if (!customer) {

@@ -8,7 +8,6 @@ const API_KEY = "AIzaSyCFjf_qjHwnZHf9vAiYo9mkyQecuhx46Mo";
 
 const serverLink = import.meta.env.VITE_SERVER_LINK;
 
-console.log(serverLink);
 const CustomerList = () => {
   const [customers, setCustomers] = useState([]);
   const [loading, setLoading] = useState(true);
