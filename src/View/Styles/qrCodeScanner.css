@@ -57,6 +57,16 @@ h2 {
     /* Smooth transition */
 }
 
+.btn-in-stock {
+    background-color: #4CAF50;
+    margin: 5px;
+}
+
+.btn-restock {
+    background-color: #f44336;
+
+}
+
 .btn-scan:hover,
 .btn-stop:hover,
 .btn-submit:hover,

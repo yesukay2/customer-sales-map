@@ -23,6 +23,7 @@ const LoginPage = () => {
 
   // Handle form submission
   const handleSubmit = async (values, { setSubmitting, setErrors }) => {
+    console.log("logging in frontend");
     const loginData = {
       email: values.email,
       password: values.password,

@@ -7,12 +7,11 @@ const CustomerSchema = new mongoose.Schema({
   qrCode: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
   shopName: { type: String, required: true },
-  //   shopLocation: { type: String, required: true },
   geolocation: {
     type: { type: String, enum: ["Point"], default: "Point" },
     coordinates: { type: [Number], required: true }, // [longitude, latitude]
   },
-  lastScanned: { type: String, default: null },
+  lastScanned: { type: String, default: "00/00/0000" },
 });
 
 const Customer = mongoose.model("Customer", CustomerSchema);

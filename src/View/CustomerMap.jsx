@@ -25,7 +25,8 @@ const CustomerMap = () => {
   const [filter, setFilter] = useState("all");
 
   const formatLastScannedDate = (lastScanned) => {
-    if (!lastScanned || lastScanned === "N/A") return "N/A";
+    if (!lastScanned || lastScanned === "N/A" || lastScanned == null)
+      return "N/A";
 
     // Split the date and time parts
     const [datePart, timePart] = lastScanned.split(" ");
@@ -126,9 +127,9 @@ const CustomerMap = () => {
     const lastScannedDate = formatLastScannedDate(lastScanned);
 
     // If lastScannedDate is invalid, return a default icon
-    if (lastScannedDate === "Invalid date" || lastScannedDate === "N/A") {
+    if (lastScannedDate === "Invalid date") {
       return new L.Icon({
-        iconUrl: "https://cdn-icons-png.flaticon.com/512/190/190406.png", // Default icon
+        iconUrl: "src/assets/locationRed.png", // Default icon
         iconSize: [25, 41],
         iconAnchor: [12, 41],
       });

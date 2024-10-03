@@ -81,7 +81,7 @@ const CustomerRegistration = () => {
           setFieldValue("longitude", longitude);
 
           // Fetch place name using Google Maps Geocoding API
-          const apiKey = "AIzaSyCFjf_qjHwnZHf9vAiYo9mkyQecuhx46Mo";
+          const apiKey = "AIzaSyBjAjkAy_Egl254DCHJGEQHkUw1RRdPfXY";
           try {
             const response = await axios.get(
               `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${apiKey}`
@@ -100,13 +100,14 @@ const CustomerRegistration = () => {
         (error) => {
           console.error("Error getting location:", error);
           alert("Unable to retrieve your location. Please try again.");
-        }
+        },
+
+        { enableHighAccuracy: true, maximumAge: 3000, timeout: 15000 }
       );
     } else {
       alert("Geolocation is not supported by this browser.");
     }
   };
-
   return (
     <div className="regCustomerContainer">
       <h2>Register Customer</h2>
