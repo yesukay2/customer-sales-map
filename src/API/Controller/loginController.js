@@ -3,7 +3,9 @@ import User from "../Model/User.js"; // Assuming you have a User model
 import bcrypt from "bcrypt";
 
 export const loginUser = async (req, res) => {
+  console.log("route");
   const { email, password } = req.body;
+  console.log(email, password);
 
   try {
     const user = await User.findOne({ email });

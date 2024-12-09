@@ -11,6 +11,18 @@ import SignUp from "./View/signUp";
 import Invoice from "./View/Invoice";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
+
+/* 
+"bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.6.4"
+
+*/ 
 const router = createBrowserRouter([
   {
     path: "/",
